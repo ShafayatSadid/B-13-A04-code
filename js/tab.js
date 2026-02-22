@@ -1,45 +1,40 @@
-// only clicked section
-function showOnly (id){
+// get tab 1
+document.getElementById('tab-1').addEventListener('click', function(){
 
-    // get all section
-    const jobSection = document.getElementById('job-section')
-    const interviewSection = document.getElementById('interview-section')
-    const rejectSection = document.getElementById('reject-section')
+    // show only clicked
+    showOnly('job-section');
+    // style the tab btn 
+    clickedBtn('tab-1')
 
-    // hide all
-    jobSection.classList.add('hidden');
-    interviewSection.classList.add('hidden');
-    rejectSection.classList.add('hidden');
+    // hide the section-total element
+    const section = document.getElementById('section-total')
+    section.classList.add('hidden')
+})
 
-    // show only clicked section
-    const selected = document.getElementById(id);
-    selected.classList.remove('hidden')
-}
+// get tab 2
+document.getElementById('tab-2').addEventListener('click', function(){
 
-// clicked btn different style and others same style.
-function clickedBtn (id){
+    // show only clicked
+    showOnly('interview-section'); 
+    // style the tab btn
+    clickedBtn('tab-2')
 
-    // get all tab btn
-    const tabBtn1 = document.getElementById('tab-1')
-    const tabBtn2 = document.getElementById('tab-2')
-    const tabBtn3 = document.getElementById('tab-3')
+    // count job in the section 1. get element 2. add inner text
+    const sectionTotal = document.getElementById('section-total');
+    totalInterview = getTotalInterview()
+    sectionTotal.innerHTML = `${totalInterview} of`
+})
 
-    // remove from all that style.
-    tabBtn1.classList.remove('bg-[#3b82f6FF]', 'text-[#ffffff]')
-    tabBtn2.classList.remove('bg-[#3b82f6FF]', 'text-[#ffffff]')    
-    tabBtn3.classList.remove('bg-[#3b82f6FF]', 'text-[#ffffff]')
+// get tab 3
+document.getElementById('tab-3').addEventListener('click', function(){
 
-    // add to all one style.
-    tabBtn1.classList.add('bg-[#ffffff]', 'text-[#64748bFF]')
-    tabBtn2.classList.add('bg-[#ffffff]', 'text-[#64748bFF]')    
-    tabBtn3.classList.add('bg-[#ffffff]', 'text-[#64748bFF]')
+    // show only clicked
+    showOnly('reject-section'); 
+    // style the tab btn
+    clickedBtn('tab-3')
 
-    // get the select btn and style with that bg and color.
-    const selectBtn = document.getElementById(id);
-
-    // remove previous style
-    selectBtn.classList.remove('bg-[#ffffff]', 'text-[#64748bFF]')
-    
-    // then add that style
-    selectBtn.classList.add('bg-[#3b82f6FF]','text-[#ffffff]')
-}
+    // count job in the section 1. get element 2. add inner text
+    const sectionTotal = document.getElementById('section-total');
+    totalReject = getTotalReject()
+    sectionTotal.innerHTML = `${totalReject} of`
+})
