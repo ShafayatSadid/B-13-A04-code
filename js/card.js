@@ -16,6 +16,7 @@ console.log(mainContainer);
 // target all element
 mainContainer.addEventListener('click', function(even){
 
+    // jodi inter btn e click kora hoy taile egula hobe
     if(even.target.classList.contains('inter-btn')){
 
         // get parent node and gether information.
@@ -50,7 +51,7 @@ mainContainer.addEventListener('click', function(even){
         rejectList = rejectList.filter(item => item.jobName != cardInfo.jobName)
         renderReject()
         renderInterview ()
-    }
+    } // jodi reject btn e click kora hoy taile egula hobe
     else if(even.target.classList.contains('reject-btn')){
 
         // get parent node and gether information.
@@ -85,6 +86,26 @@ mainContainer.addEventListener('click', function(even){
         interviewList = interviewList.filter(item => item.jobName != cardInfo.jobName)
         renderInterview()
         renderReject ()
+    } // jodi delete btn e click kora hoy taile eigula hobe.
+    else if(even.target.closest('.delete-btn')){
+        // get parent
+        const parent = even.target.parentNode.parentNode.parentNode;
+        // get job name
+        const jobName = parent.querySelector('.job-name').innerText;
+
+        // delete the card from interview and reject list if there.
+        interviewList = interviewList.filter(item => item.jobName != jobName);
+        rejectList = rejectList.filter(item => item.jobName != jobName);
+
+        // delete the parent
+        parent.remove();
+
+        // job tracker update
+        jobUpdate()
+        // then re rendering
+        renderInterview()
+        renderReject();
+        console.log(jobName)
     }
 })    
 
@@ -158,8 +179,10 @@ function renderInterview (){
     else{
         noJob.style.display = 'none'
     }
-    interviewUpdate()
 
+
+    // update counter
+    interviewUpdate()
 
 }
 

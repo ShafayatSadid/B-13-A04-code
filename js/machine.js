@@ -83,3 +83,46 @@ function getTotalReject() {
     let length = rejectSectionCards.length;
     return length;
 }
+
+
+// Job tracker Updater
+function jobUpdate(){
+
+    // job section
+    const jobSectionCards = document.querySelectorAll('#job-section .job-card')
+    console.log('job:', jobSectionCards.length)
+    // total job in all tab
+    const totalJob = document.getElementById('total-job');
+    
+
+    // set to tracker
+    let jobTracker = document.getElementById('tracker-1');
+    jobTracker.innerText = jobSectionCards.length;
+    totalJob.innerText = jobSectionCards.length;
+}
+
+// get total job length
+function getTotalJob() {
+    const jobSectionCards = document.querySelectorAll('#job-section .job-card')
+    let length = jobSectionCards.length;
+    return length;
+}
+
+
+// count total in a section
+
+function trackerTab2(){
+    // // count job in the section. 1. get element 2. add inner text
+    let sectionTotal = document.getElementById('section-total');
+    let totalInterview = getTotalInterview()
+    sectionTotal.innerHTML = `${totalInterview} of`
+}
+
+function trackerTab3(){
+
+    // count job in the section. step 1 get element step 2 add inner text
+    let sectionTotal = document.getElementById('section-total');
+    let totalReject = getTotalReject()
+    sectionTotal.innerHTML = `${totalReject} of`
+}
+
