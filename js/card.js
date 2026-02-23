@@ -51,6 +51,7 @@ mainContainer.addEventListener('click', function(even){
         rejectList = rejectList.filter(item => item.jobName != cardInfo.jobName)
         renderReject()
         renderInterview ()
+        trackerTab3()
 
     } // jodi reject btn e click kora hoy taile egula hobe
     else if(even.target.classList.contains('reject-btn')){
@@ -87,6 +88,7 @@ mainContainer.addEventListener('click', function(even){
         interviewList = interviewList.filter(item => item.jobName != cardInfo.jobName)
         renderInterview()
         renderReject ()
+        trackerTab2()
 
     } // jodi delete btn e click kora hoy taile eigula hobe.
     else if(even.target.closest('.delete-btn')){

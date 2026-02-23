@@ -22,7 +22,7 @@ document.getElementById('tab-2').addEventListener('click', function(){
     // style the tab btn
     clickedBtn('tab-2')
 
-    // trackerTab2()
+    trackerTab2()
     
 })
 
@@ -37,5 +37,5 @@ document.getElementById('tab-3').addEventListener('click', function(){
     // style the tab btn
     clickedBtn('tab-3')
 
-    // trackerTab3()
+    trackerTab3()
 })
