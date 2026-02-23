@@ -27,7 +27,13 @@ mainContainer.addEventListener('click', function(even){
         const status = parentNode.querySelector('.status').innerText;
         const description = parentNode.querySelector('.description').innerText;
 
-        
+        // add some effect at status when clicked interview btn.
+        // get the btn
+        const statusBtn = parentNode.querySelector('.status');
+        // removing the old style
+        statusBtn.classList.remove('text-[#002c5c]', 'text-[#ef4444]')
+        // add new style.
+        statusBtn.classList.add('text-[#10b981]')
 
         // create an object with this information
         const cardInfo = {
@@ -65,6 +71,14 @@ mainContainer.addEventListener('click', function(even){
         const description = parentNode.querySelector('.description').innerText;
 
         
+
+        // add some effect at status when clicked interview btn.
+        // get the btn
+        const statusBtn = parentNode.querySelector('.status');
+        // removing the old style
+        statusBtn.classList.remove('text-[#10b981]','text-[#002c5c]')
+        // add new style.
+        statusBtn.classList.add('text-[#ef4444]')
 
         // create an object with this information
         const cardInfo = {
@@ -149,7 +163,7 @@ function renderInterview (){
                 <!-- part 1.3 -->
                 <div>
                     <!-- status -->
-                    <p class="status transition-all duration-200 ease-out hover:shadow-lg hover:-translate-y-0.5 bg-[#eef4ffFF] text-center text-[0.875rem] font-medium py-[10px] px-3 w-[113px] text-[#002c5c] rounded mb-2">${interview.status}</p>
+                    <p class="status transition-all duration-200 ease-out hover:shadow-lg hover:-translate-y-0.5 bg-[#eef4ffFF] text-center text-[0.875rem] font-medium py-[10px] px-3 w-[113px] text-[#10b981] rounded mb-2">${interview.status}</p>
 
                     <p class="description text-[0.875rem] font-normal text-[#323b49]">${interview.description} </p>
                 </div>
@@ -228,7 +242,7 @@ function renderReject (){
                 <!-- part 1.3 -->
                 <div>
                     <!-- status -->
-                    <p class="status transition-all duration-200 ease-out hover:shadow-lg hover:-translate-y-0.5 bg-[#eef4ffFF] text-center text-[0.875rem] font-medium py-[10px] px-3 w-[113px] text-[#002c5c] rounded mb-2">${rejected.status}</p>
+                    <p class="status transition-all duration-200 ease-out hover:shadow-lg hover:-translate-y-0.5 bg-[#eef4ffFF] text-center text-[0.875rem] font-medium py-[10px] px-3 w-[113px] text-[#ef4444] rounded mb-2">${rejected.status}</p>
 
                     <p class="description text-[0.875rem] font-normal text-[#323b49]">${rejected.description} </p>
                 </div>
