@@ -43,3 +43,43 @@ function clickedBtn (id){
     // then add that style
     selectBtn.classList.add('bg-[#3b82f6FF]','text-[#ffffff]')
 }
+
+
+
+// interview tracker Updater
+function interviewUpdate(){
+
+    const interviewSectionCards = document.querySelectorAll('#interview-section .job-card');
+    console.log('interview:',interviewSectionCards.length)
+    // set to tracker
+    let interviewTracker = document.getElementById('tracker-2');
+    interviewTracker.innerText = interviewSectionCards.length;
+    
+}
+
+// get interview length
+function getTotalInterview() {
+    const interviewSectionCards = document.querySelectorAll('#interview-section .job-card');
+    let length = interviewSectionCards.length;
+    return length;
+}
+
+
+
+// reject tracker Updater
+function rejectedUpdate(){
+    // reject section
+    const rejectSectionCards = document.querySelectorAll('#reject-section .job-card')
+    console.log('reject:',rejectSectionCards.length)
+    // set to tracker
+    let rejectTracker = document.getElementById('tracker-3');
+    rejectTracker.innerText = rejectSectionCards.length;
+    
+}
+
+// get rejected length
+function getTotalReject() {
+    const rejectSectionCards = document.querySelectorAll('#reject-section .job-card')
+    let length = rejectSectionCards.length;
+    return length;
+}
