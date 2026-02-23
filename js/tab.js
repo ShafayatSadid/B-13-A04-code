@@ -7,8 +7,8 @@ document.getElementById('tab-1').addEventListener('click', function(){
     clickedBtn('tab-1')
 
     // hide the section-total element
-    // const section = document.getElementById('section-total')
-    // section.classList.add('hidden')
+    const section = document.getElementById('section-total')
+    section.classList.add('hidden')
 })
 
 // get tab 2
@@ -22,11 +22,8 @@ document.getElementById('tab-2').addEventListener('click', function(){
     // style the tab btn
     clickedBtn('tab-2')
 
-    trackerTab2()
-    // // // count job in the section. 1. get element 2. add inner text
-    // let sectionTotal = document.getElementById('section-total');
-    // let totalInterview = getTotalInterview()
-    // sectionTotal.innerHTML = `${totalInterview} of`
+    // trackerTab2()
+    
 })
 
 // get tab 3
@@ -40,5 +37,5 @@ document.getElementById('tab-3').addEventListener('click', function(){
     // style the tab btn
     clickedBtn('tab-3')
 
-    trackerTab3()
+    // trackerTab3()
 })

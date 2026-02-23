@@ -5,3 +5,7 @@ jobUpdate()
 interviewUpdate()
 
 rejectedUpdate()
+
+// section total updater
+trackerTab2()
+trackerTab3()

@@ -125,4 +125,3 @@ function trackerTab3(){
     let totalReject = getTotalReject()
     sectionTotal.innerHTML = `${totalReject} of`
 }
-
