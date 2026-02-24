@@ -120,6 +120,8 @@ mainContainer.addEventListener('click', function(even){
 
         // job tracker update
         jobUpdate()
+        trackerTab2()
+        trackerTab3()
         // then re rendering
         renderInterview()
         renderReject();
