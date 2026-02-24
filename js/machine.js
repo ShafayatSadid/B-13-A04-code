@@ -113,15 +113,15 @@ function getTotalJob() {
 
 function trackerTab2(){
     // // count job in the section. 1. get element 2. add inner text
-    let sectionTotal = document.getElementById('section-total');
+    let sectionTotalTab2 = document.getElementById('section-total-tab2');
     let totalInterview = getTotalInterview()
-    sectionTotal.innerHTML = `${totalInterview} of`
+    sectionTotalTab2.innerHTML = `${totalInterview} of`
 }
 
 function trackerTab3(){
 
     // count job in the section. step 1 get element step 2 add inner text
-    let sectionTotal = document.getElementById('section-total');
+    let sectionTotalTab3 = document.getElementById('section-total-tab3');
     let totalReject = getTotalReject()
-    sectionTotal.innerHTML = `${totalReject} of`
+    sectionTotalTab3.innerHTML = `${totalReject} of`
 }
